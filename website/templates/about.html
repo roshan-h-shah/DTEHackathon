@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Slightly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            color: #1e90ff; /* Dodger blue */
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .mission-statement {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .mission-statement p {
+            margin-bottom: 1rem;
+        }
+        .product-info {
+            background-color: #e6f3ff; /* Lighter blue */
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-info h2 {
+            color: #1e90ff;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Slightly</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('demo') }}">Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>About Slightly</h1>
+        
+        <div class="mission-statement">
+            <p>At Slightly, our mission is to create innovative, accessible solutions that support individuals on their mental health journey, empowering them to lead fulfilling, balanced lives. By integrating technology with compassionate care, we aim to break the stigma around mental health and ensure that everyone has access to the tools and resources they need to thrive.</p>
+            
+            <p>Our focus is on fostering a supportive community that champions emotional resilience, self-awareness, and holistic healing, making mental health a top priority in everything we do.</p>
+        </div>
+
+        <div class="product-info">
+            <h2>Our Innovative Approach</h2>
+            <p>Our product leverages a powerful model built on an extensive Quantitative EEG dataset from more than 850 patients to accurately assess mental health disorders. By analyzing raw EEG data and then transforming this into Quantitative EEG data, our system can predict whether a person is likely to be suffering from Addictive, Anxiety, Mood, Obsessive Compulsive, Schizophrenia and Stress-related disorders.</p>
+            
+            <p>This data-driven approach enables individuals to make informed decisions quickly, and with minimal cost. Our goal is to revolutionize mental health diagnostics through the power of AI and advanced EEG analysis.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Slightly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
