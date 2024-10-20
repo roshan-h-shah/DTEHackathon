@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Slightly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2 {
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .feature-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 2%;
+        }
+        .image-box {
+            width: 48%;
+            text-align: center;
+        }
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .image-box p {
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Slightly</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('demo') }}">Demo</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Features</h1>
+        
+        <div class="feature-section">
+            <h2>EEG Data Transformation</h2>
+            <p>Our initial feature is a program that transforms an individual's Raw EEG Data into a Quantitative EEG format that our machine learning model can use to predict an individual's mental health disorder. This program utilizes the Butterworth low-pass filter in Scipy's Python Library to attribute raw EEG data to different bands (delta, theta, gamma, alpha, beta and high beta) that are used in data processing.</p>
+            
+            <p>By leveraging this signal processing approach, we can accurately convert raw EEG data to Quantitative EEG data. Below is a sample EEG chart, detailing voltages at specific brain areas as a function of time. From there, we convert this chart or, we convert the individual data points that comprise the chart into a readable output that is then predicted by our machine learning model.</p>
+            
+            <div class="image-container">
+                <div class="image-box">
+                    <p>Input</p>
+                    <img src="{{ url_for('static', filename='images/RAWEEG.png') }}" alt="Input EEG Chart">
+                </div>
+                <div class="image-box">
+                    <p>Output</p>
+                    <img src="{{ url_for('static', filename='images/output.png') }}" alt="Output EEG Chart">
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h2>Machine Learning Model</h2>
+            <p>Our machine learning model is a proprietary model that leverages Support Vector Classification to accurately classify an individual's mental health disorder. This model was implemented with a train-test split of 0.3, and was optimized with hyperparameter tuning.</p>
+            
+            <p>The model produces statistically significant results at the 0.05 significance level, and the model has a false positive rate of less than 12%.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Slightly. All rights reserved.</p>
+    </footer>
+</body>
+</html>

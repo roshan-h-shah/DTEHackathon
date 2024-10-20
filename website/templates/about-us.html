@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Slightly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .team-member {
+            width: 300px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .team-member h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Slightly</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('signin') }}">Sign In</a></li>
+            <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+            <li><a href="{{ url_for('demo') }}">Demo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Meet Our Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/roshan.png') }}" alt="Roshan Shah">
+                <h2>Roshan Shah</h2>
+                <p>Roshan is a freshman majoring in Computer Science and Mathematics. He's passionate about machine learning and data science and has been instrumental in developing Slightly's machine learning model.</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='images/kush.png') }}" alt="Kush Miryala">
+                <h2>Kush Miryala</h2>
+                <p>Kush is a sophomore studying Computer Science. He's interested in product management and software development and led Slightly's initiative to transform Raw EEG Data to Quantitative Data .</p>
+            </div>
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Saahil Verma">
+                <h2>Saahil Verma</h2>
+                <p>Saahil is a sophomore majoring in Computer Science with a minor in Mathematics. He's interested in data anlaytics and software development. His knowledge in full-stack development allowed him to curate Slightly's website.</p>
+            </div>
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Nayan Shah">
+                <h2>Nayan Shah</h2>
+                <p>Nayan is a freshman double majoring in Biology and Statistics. His research into the intersection of mental health and EEG activity has been crucial in shaping Slightly's quantitative approach to combatting mental health disorders.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Slightly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
